@@ -39,7 +39,7 @@ module ActionView
           if Rails.version >= '5.2.0'
             value = options.delete('value') { value_before_type_cast }
           else
-            value = value_before_type_cast(object)
+            value = value_before_type_cast
           end
           trix_editor_tag(options.delete('name'), value, options)
         end
